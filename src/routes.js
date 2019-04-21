@@ -10,7 +10,7 @@ const validators = require('./app/validators')
 routes.post('/users', validate(validators.User), handle(controllers.UserController.store))
 routes.post('/sessions', validate(validators.Session), controllers.SessionController.store)
 
-// routes.get('/teste', authMiddleware, (req, res) => res.json({ ok: true }))
+routes.get('/teste', (req, res) => res.json({ ok: true }))
 routes.use(authMiddleware)
 
 /**
